@@ -1,0 +1,436 @@
+:root {
+  --bg: #050505;
+  --panel: #0d0d0d;
+  --panel2: #111;
+  --line: #292929;
+  --text: #f5f5f5;
+  --muted: #858585;
+  --orange: #ff8a00;
+  --purple: #a300ff;
+  --blue: #1c7cff;
+  --green: #00a86b;
+  --red: #a82813;
+  --lime: #8b9d00;
+  --indigo: #5038db;
+  --gold: #a76600;
+  --white: #fafafa;
+  --danger: #dd5c55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* Background */
+
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 138, 0, 0.05),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(77, 56, 219, 0.05),
+      transparent 25%
+    ),
+    var(--bg);
+}
+
+/* Top Navigation */
+
+.topbar {
+  height: 70px;
+  padding: 0 34px;
+  border-bottom: 1px solid #1c1c1c;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(5, 5, 5, 0.93);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.brand-icon {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+}
+
+/* Navigation Links */
+
+.nav {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.nav-link,
+.login-link {
+  background: none;
+  border: 0;
+  color: #808080;
+  font-size: 11px;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.login-link:hover {
+  color: #fff;
+}
+
+/* Top Actions */
+
+.top-actions {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+
+.pill-btn {
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 10px 15px;
+  font-size: 11px;
+  font-weight: 800;
+  transition: 0.18s;
+}
+
+.pill-btn:hover {
+  transform: translateY(-1px);
+}
+
+.pill-orange {
+  background: var(--orange);
+  color: #111;
+}
+
+.pill-dark {
+  background: #151515;
+  border-color: #2e2e2e;
+  color: #fff;
+}
+
+.pill-outline {
+  background: transparent;
+  border-color: #424242;
+  color: #fff;
+}
+
+/* Mobile Menu */
+
+.menu-btn {
+  display: none;
+  margin-left: auto;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 7px 10px;
+}
+
+/* Screens */
+
+.screen {
+  display: none;
+  min-height: calc(100vh - 70px);
+  padding: 42px 58px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Welcome Screen */
+
+.welcome-screen {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-inner {
+  width: min(760px, 100%);
+}
+
+/* Mini Brand */
+
+.mini-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+  margin-bottom: 29px;
+}
+
+.mini-mark {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+}
+
+/* Labels */
+
+.tiny-label {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.17em;
+  color: #777;
+  font-weight: 800;
+}
+
+/* Welcome Heading */
+
+.welcome-screen h1 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 10px 0 8px;
+}
+
+.welcome-screen h1 span {
+  font-weight: 700;
+}
+
+.welcome-sub {
+  font-size: 10px;
+  color: #707070;
+  margin: 0 0 24px;
+}
+
+/* Role Cards */
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 190px);
+  justify-content: center;
+  gap: 14px;
+}
+
+.role-card {
+  height: 225px;
+  background: #f8f8f8;
+  border: 0;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  color: #181818;
+  padding: 16px;
+}
+
+.role-card::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  bottom: -35px;
+  height: 110px;
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0.75;
+}
+
+.role-card.client::after {
+  background: rgba(255, 153, 0, 0.85);
+}
+
+.role-card.worker::after {
+  background: rgba(135, 0, 255, 0.5);
+}
+
+/* Role Text */
+
+.role-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.role-label {
+  font-size: 10px;
+}
+
+.role-text strong {
+  font-size: 13px;
+  line-height: 1.17;
+  font-weight: 500;
+}
+
+.role-arrow {
+  margin-top: 110px;
+  font-size: 9px;
+  color: #666;
+}
+
+/* Person Illustration */
+
+.person {
+  position: absolute;
+  z-index: 2;
+  right: 9px;
+  bottom: -2px;
+  width: 99px;
+  height: 142px;
+}
+
+.person .head {
+  position: absolute;
+  left: 31px;
+  top: 6px;
+  width: 42px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f2c19d, #bb704e);
+}
+
+.person .body {
+  position: absolute;
+  left: 7px;
+  right: 4px;
+  bottom: 0;
+  height: 104px;
+  background: linear-gradient(160deg, #fff 0 34%, #242424 35% 100%);
+  clip-path: polygon(32% 0, 68% 0, 100% 100%, 0 100%);
+  border-radius: 30px 30px 6px 6px;
+}
+
+.person-1::before,
+.person-2::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 0;
+  width: 48px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1d1713;
+  z-index: 3;
+}
+
+.person-2 .body {
+  background: linear-gradient(160deg, #f0ad19 0 35%, #252525 36% 100%);
+}
+
+.person-2::before {
+  background: #382319;
+}
+
+/* Tablet Responsive Design */
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .top-actions {
+    margin-left: auto;
+  }
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 650px) {
+  .topbar {
+    height: 62px;
+    padding: 0 16px;
+  }
+
+  .screen {
+    min-height: calc(100vh - 62px);
+    padding: 30px 15px;
+  }
+
+  .top-actions {
+    display: none;
+  }
+
+  .role-grid {
+    grid-template-columns: repeat(2, 145px);
+    gap: 8px;
+  }
+
+  .role-card {
+    height: 205px;
+    padding: 12px;
+  }
+
+  .role-text strong {
+    font-size: 11px;
+  }
+
+  .role-arrow {
+    margin-top: 97px;
+  }
+
+  .person {
+    transform: scale(0.82);
+    transform-origin: bottom right;
+    right: -2px;
+  }
+}

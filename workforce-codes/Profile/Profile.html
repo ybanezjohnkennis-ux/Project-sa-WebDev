@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="stylesheet" href="Profile.css">
+</head>
+<body>
+
+<section id="profile" class="screen profile-screen">
+
+    <div class="screen-head left">
+
+        <p class="tiny-label">
+            ACCOUNT & APPLICATIONS
+        </p>
+
+        <h2>
+            YOUR <span>PROFILE</span>
+        </h2>
+
+        <p>
+            Keep your profile, resume, jobs, starred opportunities,
+            and application status in one place.
+        </p>
+
+    </div>
+
+    <div class="profile-layout">
+
+        <aside class="profile-sidebar">
+
+            <div class="profile-avatar" id="profileAvatar">
+                W
+            </div>
+
+            <div class="profile-name" id="profileName">
+                Guest User
+            </div>
+
+            <div class="profile-role" id="profileRole">
+                Not signed in
+            </div>
+
+            <div class="profile-nav">
+
+                <button class="profile-tab active" data-profile="myjobs">
+                    My Jobs
+                </button>
+
+                <button class="profile-tab" data-profile="posted">
+                    Posted Jobs
+                </button>
+
+                <button class="profile-tab" data-profile="starred">
+                    Starred
+                </button>
+
+                <button class="profile-tab" data-profile="pending">
+                    Pending Review
+                </button>
+
+                <button class="profile-tab" data-profile="rejected">
+                    Rejected Applications
+                </button>
+
+                <button class="profile-tab" data-profile="resume">
+                    Resume
+                </button>
+
+            </div>
+
+            <button class="small-dark-btn" id="editProfileBtn">
+                Edit profile
+            </button>
+
+            <button class="small-dark-btn" id="postJobBtn">
+                Post a job
+            </button>
+
+            <button
+                class="small-dark-btn"
+                id="clientMessagesBtn"
+                style="display:none"
+            >
+                Review applicants
+            </button>
+
+            <button class="small-dark-btn" id="profileSignIn">
+                Sign in / Create account
+            </button>
+
+        </aside>
+
+
+        <div class="profile-main">
+
+            <div class="profile-panel" id="panel-posted">
+
+                <div class="panel-title">
+                    <h3>Posted Jobs</h3>
+                    <span>Client job posts</span>
+                </div>
+
+                <div class="list" id="postedJobsList"></div>
+
+            </div>
+
+
+            <div class="profile-panel active" id="panel-myjobs">
+
+                <div class="panel-title">
+                    <h3>My Jobs</h3>
+                    <span id="myJobsCount">0 items</span>
+                </div>
+
+                <div class="list" id="myJobsList"></div>
+
+            </div>
+
+
+            <div class="profile-panel" id="panel-starred">
+
+                <div class="panel-title">
+                    <h3>Starred</h3>
+                    <span id="starredCount">0 items</span>
+                </div>
+
+                <div class="list" id="starredList"></div>
+
+            </div>
+
+
+            <div class="profile-panel" id="panel-pending">
+
+                <div class="panel-title">
+                    <h3>Pending Review</h3>
+                    <span>Application status</span>
+                </div>
+
+                <div class="list" id="pendingList"></div>
+
+            </div>
+
+
+            <div class="profile-panel" id="panel-received">
+
+                <div class="panel-title">
+                    <h3>Applications Received</h3>
+                    <span>Worker applications</span>
+                </div>
+
+                <div class="list" id="receivedList"></div>
+
+            </div>
+
+
+            <div class="profile-panel" id="panel-rejected">
+
+                <div class="panel-title">
+                    <h3>Rejected Applications</h3>
+                    <span>Keep improving and try again</span>
+                </div>
+
+                <div class="list" id="rejectedList"></div>
+
+            </div>
+
+
+            <div class="profile-panel" id="panel-resume">
+
+                <div class="panel-title">
+                    <h3>Resume</h3>
+                    <span>Attach it automatically to applications</span>
+                </div>
+
+                <div class="resume-box">
+
+                    <div>
+
+                        <strong id="resumeTitle">
+                            No resume uploaded
+                        </strong>
+
+                        <p id="resumeMeta">
+                            Upload a PDF/DOC/DOCX resume.
+                            Your latest saved copy will be attached
+                            when you apply.
+                        </p>
+
+                    </div>
+
+                    <div class="resume-actions">
+
+                        <button class="mini-btn" id="resumeBtn">
+                            Upload / Update
+                        </button>
+
+                        <button
+                            class="mini-btn"
+                            id="downloadResumeBtn"
+                            style="display:none"
+                        >
+                            Preview
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <input
+                    id="resumeFileInput"
+                    type="file"
+                    accept=".pdf,.doc,.docx"
+                    hidden
+                >
+
+                <div style="margin-top:12px" class="list">
+
+                    <div class="status-row">
+
+                        <span class="job-left">
+
+                            <strong>Profile completeness</strong>
+
+                            <span id="resumeCompleteness">
+                                60% — add your resume, skills,
+                                and profile details.
+                            </span>
+
+                        </span>
+
+                        <span class="status-chip">
+                            PROFILE
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="status-row"
+                    style="margin-top:8px"
+                >
+
+                    <span class="job-left">
+
+                        <strong>Resume privacy</strong>
+
+                        <span>
+                            Your resume is stored locally in this demo
+                            browser and can be replaced anytime.
+                        </span>
+
+                    </span>
+
+                    <button
+                        class="mini-btn"
+                        id="removeResumeBtn"
+                        style="display:none"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+```

@@ -1,0 +1,52 @@
+/* WHY US.css */
+.about-screen{
+  align-items:center;
+  justify-content:center
+}
+.about-card{
+  width:min(820px,100%);
+  background:#0b0b0b;
+  border:1px solid #252525;
+  border-radius:16px;
+  padding:30px
+}
+.about-card h2{
+  font-size:35px;
+  line-height:1.03;
+  font-weight:500;
+  margin:8px 0 10px
+}
+.about-card h2 span{
+  font-weight:700
+}
+.about-card>p:not(.tiny-label){
+  font-size:11px;
+  color:#7d7d7d;
+  line-height:1.7;
+  max-width:690px
+}
+.about-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-top:22px
+}
+.about-stats div{
+  background:#111;
+  border:1px solid #222;
+  border-radius:10px;
+  padding:14px
+}
+.about-stats strong{
+  display:block;
+  font-size:24px;
+  
+  font-weight:400}
+.about-stats span{
+  font-size:8px;
+  color:#737373}
+
+@media(max-width:650px){
+  .about-stats{grid-template-columns:1fr}
+  .about-card{padding:22px}
+}

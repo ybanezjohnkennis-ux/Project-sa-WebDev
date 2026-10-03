@@ -1,0 +1,297 @@
+.opportunities-wrap {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+/* ================================
+   CATEGORY BAR
+================================ */
+
+.category-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 0 auto 15px;
+}
+
+.category-btn {
+    border: 1px solid #292929;
+    background: #0f0f0f;
+    color: #777;
+
+    padding: 8px 10px;
+
+    border-radius: 7px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: #1b1b1b;
+    color: #fff;
+    border-color: #404040;
+}
+
+/* ================================
+   JOB TOOLBAR
+================================ */
+
+.job-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.job-toolbar input {
+    background: #0e0e0e;
+    color: #fff;
+
+    border: 1px solid #282828;
+    border-radius: 7px;
+
+    padding: 9px 11px;
+
+    font-size: 9px;
+
+    min-width: 250px;
+
+    outline: none;
+}
+
+.job-toolbar input:focus {
+    border-color: #404040;
+}
+
+.job-toolbar input::placeholder {
+    color: #666;
+}
+
+/* ================================
+   JOB GRID
+================================ */
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* ================================
+   JOB CARD
+================================ */
+
+.job-card {
+    background: #0c0c0c;
+
+    border: 1px solid #222;
+    border-radius: 12px;
+
+    padding: 15px;
+
+    transition: 0.2s ease;
+}
+
+.job-card:hover {
+    border-color: #333;
+    background: #0f0f0f;
+}
+
+/* ================================
+   COMPANY LINE
+================================ */
+
+.company-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ================================
+   COMPANY LOGO
+================================ */
+
+.company-logo {
+    width: 29px;
+    height: 29px;
+
+    border-radius: 8px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+/* COMPANY COLORS */
+
+.blue {
+    background: #172e54;
+}
+
+.purple {
+    background: #35164c;
+}
+
+.green {
+    background: #123c2f;
+}
+
+.orange {
+    background: #513007;
+}
+
+.red {
+    background: #4b1812;
+}
+
+/* ================================
+   MATCH PERCENTAGE
+================================ */
+
+.match {
+    font-size: 8px;
+    color: #6cd09c;
+}
+
+/* ================================
+   JOB TITLE
+================================ */
+
+.job-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+
+    margin: 14px 0 5px;
+
+    color: #fff;
+}
+
+/* ================================
+   JOB DESCRIPTION
+================================ */
+
+.job-card > p {
+    font-size: 8px;
+    color: #777;
+
+    margin: 0;
+}
+
+/* ================================
+   JOB TAGS
+================================ */
+
+.job-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin: 12px 0;
+}
+
+.job-tags span {
+    background: #151515;
+
+    border: 1px solid #252525;
+
+    border-radius: 999px;
+
+    padding: 5px 7px;
+
+    color: #777;
+
+    font-size: 7px;
+}
+
+/* ================================
+   JOB BUTTON
+================================ */
+
+.job-btn {
+    width: 100%;
+
+    border: 1px solid #2a2a2a;
+
+    background: #151515;
+    color: #fff;
+
+    border-radius: 6px;
+
+    padding: 9px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.job-btn:hover {
+    background: #1d1d1d;
+    border-color: #3a3a3a;
+}
+
+/* ================================
+   NO RESULTS
+================================ */
+
+.no-results {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    border: 1px dashed #2b2b2b;
+
+    border-radius: 12px;
+
+    padding: 28px;
+
+    color: #777;
+
+    font-size: 10px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .job-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+
+    .job-toolbar {
+        flex-direction: column;
+    }
+
+    .job-toolbar input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .job-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-bar {
+        gap: 5px;
+    }
+
+    .category-btn {
+        padding: 7px 9px;
+    }
+}
